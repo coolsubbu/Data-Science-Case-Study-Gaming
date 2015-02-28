@@ -19,10 +19,7 @@ Data Science on Gaming Data
    
 3.Please read the Following File to see the Prediction performed on The User Data using the above computed metrics.
 
-   b.1   Predicting the User's Spending Activities in the Game.docx 
-           The above performs prediction of whether a User will spend money on Games upto 86% accuracy. 
-           using 3 Classifiers(Logistic Regression, SVM,Decision Tree) and 
-           5 metrics to choose between them {Precision,Recall,F1 Score,Auccuracy,Area Under Curve,Mutual Information}
+ Predicting the User's Spending Activities in the Game.docx : performs prediction of whether a User will spend money on Games upto 86% accuracy using 3 Classifiers(Logistic Regression, SVM,Decision Tree) and 5 metrics to choose between them {Precision,Recall,F1 Score,Auccuracy,Area Under Curve,Mutual Information}
 
 4. Sentiment-chat-language.py - Performs Sentiment Analysis, Language Detection, Parts Of Speech Tagging on Text obtained from Chats data of Gamers.
 
