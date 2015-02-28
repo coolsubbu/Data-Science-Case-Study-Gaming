@@ -24,3 +24,5 @@ Data Science on Gaming Data
 4.Sentiment-chat-language.py - Performs Sentiment Analysis, Language Detection, Parts Of Speech Tagging on Text obtained from Chats data of Gamers.
 
 5.Upload-attacks-user-perf.pl- Performs extraction of User Data from the text files and compute User Performance Metrics and upload it to the database.   
+
+6.KABAM-DATA-SCIENCE.pptx: Presentation of Data Science Case Study to Kabam.
