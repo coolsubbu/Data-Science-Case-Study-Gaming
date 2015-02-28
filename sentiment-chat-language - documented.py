@@ -1,8 +1,9 @@
+# This file performs the following functionalities as part of the Data Science. 
 # Read the file containing Chats from Gamers.
 # Obtain Sentiments from Chats (TextBlob)
 # Obtain Subjectivity from Chats.(TextBlob)
 # Detect Language from the Chats.(Compact Language Detector (cld))
-#Perform Parts of Speech Tagging using TextBlob
+# Perform Parts of Speech Tagging using TextBlob
 # Upload to Database.
 import re
 from textblob import TextBlob
@@ -11,7 +12,7 @@ import MySQLdb
 import cld
 try:
     #Connect to database
-    db=MySQLdb.connect('localhost','root','root','kabam')
+    db=MySQLdb.connect('localhost','root','D5vhptyi!','kabam')
     
     cur=db.cursor()
 
