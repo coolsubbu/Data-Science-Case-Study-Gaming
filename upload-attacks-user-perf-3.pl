@@ -1,8 +1,9 @@
 #!usr/bin/perl
 use DBI;
+$location="C:/Data"
 $dbh=DBI->connect('DBI:mysql:kabam','root','root') or die "connection error: $DBI:errstr\n";
 #AIM: To study and upload the data for the users stats , alliance stats and Location Stats.
-open(USERDATA,"<C:/Users/Yogesh/Desktop/attacks_2.txt") or die "cant open the file $!";    
+open(USERDATA,"<$location./attacks_2.txt") or die "cant open the file $!";    
 my @array=<USERDATA>;
 my $score;
 my %userHash;
