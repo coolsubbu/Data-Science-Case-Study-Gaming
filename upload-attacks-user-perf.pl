@@ -5,8 +5,6 @@ use JSON
 
 open(CONFIG,"<","CONFIG.JSON") or die "cant open config json file"
 
-
-
 $config=decode_json(<CONFIG>)
 
 $dbh=DBI->connect('DBI:mysql:kabam',$config->{"DB"}->{'usr'},$config->{"DB"}->{"pw"}) or die "connection error: $DBI:errstr\n";
@@ -225,7 +223,8 @@ for($i=0;$i<$#array;$i++)
 						{
 							my $killed=$1-$2;
 							my $valuelost;
-							if($us0>=14 && $us0<=19 && $month==12 && $day>=12) # Capture the condition based on the 12/12 for increased might for troops u14 till u19.
+						        # Capture the condition based on the 12/12 for increased might for troops u14 till u19.	
+							if($us0>=14 && $us0<=19 && $month==12 && $day>=12)  
 							{
 								$valuelost=$might{'u'.$us0}*$killed*3/2;
 							}
@@ -374,11 +373,14 @@ for($i=0;$i<$#array;$i++)
 	#The mightlost of the Attackers subtracts to the Attack Scores.
 	#experience gained by the attacker adds to the scores.
 	#The Attack scores are averaged across the matches.
+	
 	my $AttackScore=$SATTACKmight+$xp+($SDEFENCEAtkBST+$SDEFENCEDefBST+$SDEFENCEcombatLvl)*0.1+$lootScore+$SDEFENCEmightLost+$SATTACKcombatLvl;
 	$AttackScore=$AttackScore-(($wall+1)/($rnds+1))-($SATTACKAtkBST-$SATTACKDefBST)*0.01-$SATTACKmightLost*0.15;
 	$AttackScore=abslog(1+$AttackScore);
+	
 	#The Knight scores are simply 10% of the Attack or Defence scores which accrues the Knight user.
 	#The Knight scores are doubled if the user led to a win. It is halfed if he led the army to Lost.
+	
 	my $KnightDefScore=$DefenceScore/10;
 	my $KnightAtkScore=$AttackScore/10;
 	
@@ -447,6 +449,7 @@ for($i=0;$i<$#array;$i++)
 		#Location Defence and Attack Analytics
 		#The victory represents the matchstatus. 
 		#The matchstatus with 2 are not considered.
+	
 		if(!exists $LocationScore{$SDEFENCEindex})
 		{
 			$LocationScore{$SDEFENCEindex}{"Lost"}=1;
@@ -589,7 +592,8 @@ for($i=0;$i<$#array;$i++)
 			
 			#Knight Analytics for Attack and Defence
 			#User is the Knight who attacked and Lost we half his AttackScore
-			if(!exists $userHash{$SATTACKKid})
+		
+		        if(!exists $userHash{$SATTACKKid})
 			{
 				$userHash{$SATTACKKid}{"Knight:LostCount"}=1;
 				$userHash{$SATTACKKid}{"Knight:Atk"}=0.5*$KnightAtkScore;
