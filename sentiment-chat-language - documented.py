@@ -8,16 +8,20 @@
 import re
 from textblob import TextBlob
 import sys
+import pandas as pd
 import MySQLdb
 import cld
+import json
 try:
     #Connect to database
-    db=MySQLdb.connect('localhost','root','D5vhptyi!','kabam')
+    d=open('config.json')
+    jsondf=json.load(d)
+    db=MySQLdb.connect('localhost',jsondf['db']['usr'],jsondf['db']['password'],'kabam')
     
     cur=db.cursor()
 
     #Open the file
-    f=open("C:/Users/Yogesh/Desktop/alliance_chat_English3.txt","r")
+    f=open(jsondf['data']['folder']+"/alliance_chat_English.txt","r")
     i=0
     for line in f.readlines():
 
