@@ -1,28 +1,28 @@
-# Data-Science-Case-Study-Gaming
-Data Science on Gaming Data
+# data-science-case-study-gaming
+data science on gaming data
 
-1.Please Go through Case Study Data Setup.
+1.please go through case study data setup.
 
-2.Please read the following Word Documents to brief through basic analytics and insights obtained from the Data
+2.please read the following word documents to brief through basic analytics and insights obtained from the data
 
-   a.1.  Analyzing User Expenditure Vs Social Interaction and Performance of the User.
+   a.1.  analyzing user expenditure vs social interaction and performance of the user.
    
-   a.2.  Analyzing Location Vs Performance of the User.
+   a.2.  analyzing location vs performance of the user.
 
-   a.3.  Measuring User Performance.
+   a.3.  measuring user performance.
 
-   a.4.  Processing Alliance Chats.
+   a.4.  processing alliance chats.
 
-   a.5.  Understanding User Choices in Alliance,Knights,Fights and Chats.
+   a.5.  understanding user choices in alliance, knights, fights and chats.
 
-   a.6.  Ideas
+   a.6.  ideas
    
-3.Please read the Following File to see the Prediction performed on The User Data using the above computed metrics.
+3. please read the following file to see the prediction performed on the user data using the above computed metrics.
 
- Predicting the User's Spending Activities in the Game.docx : performs prediction of whether a User will spend money on Games upto 86% accuracy using 3 Classifiers(Logistic Regression, SVM,Decision Tree) and 5 metrics to choose between them {Precision,Recall,F1 Score,Auccuracy,Area Under Curve,Mutual Information}
+ predicting the user's spending activities in the game.docx : performs prediction of whether a user will spend money on games upto 86% accuracy using 3 classifiers( logistic regression, support vector machines , decision tree ) and 5 metrics to choose between them { precision, recall ,f1 score , accuracy , area under curve , mutual information }
 
-4.Sentiment-chat-language.py - Performs Sentiment Analysis, Language Detection, Parts Of Speech Tagging on Text obtained from Chats data of Gamers.
+4.sentiment-chat-language.py - performs sentiment analysis, language detection, parts of speech tagging on text obtained from chats data of gamers.
 
-5.Upload-attacks-user-perf.pl- Performs extraction of User Data from the text files and compute User Performance Metrics and upload it to the database.   
+5.upload-attacks-user-perf.pl- performs extraction of user data from the text files and compute user performance metrics and upload it to the database.   
 
-6.KABAM-DATA-SCIENCE.pptx: Presentation of Data Science Case Study to Kabam.
+6. Kabam-data-science.pptx: presentation of data science case study to Kabam.
